@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 01</title>
+</head>
+<body>
+    <form method="GET" action="/result">
+        <table>
+            <tr>
+                <td>
+                    <label for="number1">Số hạng 1</label>
+                </td>
+                <td>
+                    <input type="number" id="number1" name="number1"placeholder="Nhập số hạng thứ 1">
+                </td>
+            </tr>    
+            <tr>
+                <td>
+                    <label for="number2">Số hạng 2</label>
+    
+                </td>
+                <td>
+                    <input type="number" id="number2" name="number2" placeholder="Nhập số hạng thứ 2">
+    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="operator">Phép tính</label>
+    
+                </td>
+                <td>
+                    <select id="operator" name="operator">
+                        <option>Chọn phép tính</option>
+                        <option value='+'>Cộng</option>
+                        <option value='-'>Trừ</option>
+                        <option value='*'>Nhân</option>
+                        <option value='/'>Chia</option>
+                    </select>
+                </td>
+            </tr>
+    
+            <tr>
+                <td><input type="submit" value="Tính"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
