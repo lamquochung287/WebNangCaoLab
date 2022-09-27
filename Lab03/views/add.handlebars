@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Add New Item</title>
+</head>
+<body>
+    <h1>Add New Item</h1>
+    
+    <form method="post" action="/add">
+        <table class="table table-striped">
+            <tr>
+                <th>Id: </th>
+                <td><input type="number" name="id" required></td>
+            </tr>
+            <tr>
+                <th>Name: </th>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <th>Price: </th>
+                <td><input type="number" name="price" required></td>
+            </tr>
+            <tr>
+                <th>Description: </th>
+                <td><input type="text"  name="description" required></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+            {{{error}}}    
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<h1>Danh sách sản phẩm</h1>
+<a href="/add">
+
+    <button class="btn btn-primary">Add new product</button>
+</a>
+<div>
+    <p>Click on the product to view details.</p>
+</div>
+<div>
+    <form method="get" id="form">
+        <table class="table table-striped" style="margin-top: 10px" id="table">
+            <tr>
+                <th>STT</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+            <tbody>
+                {{#each product}}
+                <tr onclick="addRowHandlers(this)">
+                    <td>{{id}}</td>
+                    <td>{{name}}</td>
+                    <td>${{price}}</td>
+                    <td><a href="/edit/{{id}}">Edit </a>|<a id="deleteHref" onclick="if(confirm('Are you sure you want to delete {{name}}')){
+                        Event.stopPropagation()}" href="/delete/{{id}}">Delete</a></td>
+                </tr>
+
+            </tbody>
+
+            {{/each}}
+        </table>
+    </form>
+</div>
+
+<script>
+    function addRowHandlers() {
+        var table = document.getElementById("table");
+        var rows = table.getElementsByTagName("tr");
+        for (i = 0; i < rows.length; i++) {
+            var currentRow = table.rows[i];
+            var createClickHandler = function (row) {
+                return function () {
+                    var cell = row.getElementsByTagName("td")[0];
+                    var id = cell.innerHTML;
+                    var form = document.getElementById('form');
+                    form.setAttribute("action", `/${id}`)
+                    form.submit()
+                    console.log(form.getAttribute("action"))
+                };
+            };
+            currentRow.onclick = createClickHandler(currentRow);
+        }
+    }
+
+</script>

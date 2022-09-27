@@ -1,0 +1,21 @@
+{
+  "name": "lab03",
+  "version": "1.0.0",
+  "description": "Lab 03 TDTU 519H0291 - Lam Quoc Hung",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Lam Quoc Hung",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.1",
+    "express-flash": "^0.0.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "nodemon": "^2.0.20",
+    "passport": "^0.6.0",
+    "readline": "^1.3.0"
+  }
+}
